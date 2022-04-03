@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Bet app</h1>
+  <div *ngIf="winNumber === undefined">
+    <app-bet-slip (winNumberEvent)="result($event)"></app-bet-slip>
+    <app-ball-selector class="selector"></app-ball-selector>
+  </div>
+  <div *ngIf="winNumber !== undefined">
+    <div *ngIf="win" class="msg">
+      <span>You have won!</span
+      ><span>{{ earnings | currency: "EUR":"symbol" }}</span>
+    </div>
+    <div *ngIf="!win" class="msg"><span></span>Try it next time</div>
+    <div class="msg">
+      <span>Winner number</span>
+      <span class="price">{{ winNumber }}</span>
+    </div>
+    <div class="center-button">
+      <button (click)="tryAgain()">Try again</button>
+    </div>
+  </div>
+</div>

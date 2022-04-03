@@ -1,0 +1,9 @@
+<div *ngFor="let ball of balls">
+  <div
+    class="no-selected"
+    (click)="selection(ball)"
+    [ngClass]="ball.selected ? 'selected' : 'no-selected'"
+  >
+    {{ ball.number }}
+  </div>
+</div>

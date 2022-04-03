@@ -1,0 +1,23 @@
+<div class="bet-slip">
+  <div class="selection">
+    Number to play: {{ ball === 0 ? "No number selected yet" : ball }}
+  </div>
+  <div class="my-input font">
+    <input
+      class="font"
+      [formControl]="bet"
+      type="number"
+      name="bet"
+      id="bet"
+    /><span class="currency">€</span>
+  </div>
+  <div>
+    <button (click)="placeBet()">Place bet</button>
+  </div>
+</div>
+
+<div *ngIf="spinner" class="spinner">
+  <div class="spinner-frame">
+    <div class="spinner-bar"></div>
+  </div>
+</div>

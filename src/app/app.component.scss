@@ -1,0 +1,36 @@
+.selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container {
+  margin: 0 auto;
+  margin-top: 10em;
+  display: flex;
+  width: 20%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.msg {
+  display: flex;
+  font-size: 1.5em;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1em;
+  text-align: center;
+}
+.price {
+  display: flex;
+  font-size: 4em;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.center-button {
+  display: flex;
+  flex-direction: column;
+}
